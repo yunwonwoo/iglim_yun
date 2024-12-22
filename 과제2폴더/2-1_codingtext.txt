@@ -1,0 +1,16 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int solution(int n, int k) {
+    int answer = 0;
+    const int PRICE_LAMB = 12000; // 양꼬치  가격
+    const int PRICE_DRINK = 2000; // 음료수 가격
+
+    int nDrinkFree = n / 10; // 무료 개수
+    int nDrinkTotal = max(0, k - nDrinkFree); // 계산할 음료수 개수
+
+    answer = (n * PRICE_LAMB) + (nDrinkTotal * PRICE_DRINK);
+    return answer;
+}

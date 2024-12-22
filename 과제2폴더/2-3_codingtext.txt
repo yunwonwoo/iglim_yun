@@ -1,0 +1,25 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int solution(vector<int> ingredient) {
+    int answer = 0;
+
+    vector<int> s;
+
+    for (int i = 0; i < ingredient.size(); i++) {
+        s.push_back(ingredient[i]);
+
+        if (s.size() >= 4) {
+            int nSize = s.size();
+            if (s[nSize - 4] == 1 && s[nSize - 3] == 2 &&
+                s[nSize - 2] == 3 && s[nSize - 1] == 1) {
+                answer++;
+                s.erase(s.end() - 4, s.end());
+            }
+        }
+    }
+
+    return answer;
+}

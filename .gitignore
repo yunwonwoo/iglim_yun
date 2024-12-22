@@ -1,0 +1,12 @@
+# Visual Studio 임시 및 빌드 파일 제외
+.vs/ 
+*.pch 
+*.ilk 
+*.ipch 
+*.VC.db 
+x64/Debug/
+x64/Release/
+*.exe
+*.dll
+*.obj
+*.pdb
